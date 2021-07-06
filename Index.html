@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
+    <!-- 'classic' theme -->
+    <style type="text/css">
+        /* canvas {
+            border: 1px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: blue;
+            transform: translate(-50%, -50%);
+        } */
+
+        .pickr-container {
+            position: absolute;
+            top: 2%;
+            left: 50%;
+            background-color: red;
+            transform: translate(-50%, -50%);
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .picker-container {
+            color: yellow;
+        }
+
+        /* .canvas {
+            width: 50%;
+            height: 50%;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <div class="pickr-container">
+        <div class="color-picker"></div>
+    </div>
+    <!-- <div class ="canvas">
+        <div class="color-picker"></div> 
+       
+    </div> -->
+    <canvas id="canvas"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+    <script src="canvas.js"></script>
+    <!-- <div><button id="theimage" onclick="saveImage()"></button>Save Image</button></div> -->
+    <!-- <button type="button" id="btnDisplay">Display</button> -->
+    <button type="button" id="btnDownload">Download</button>
+    <button type="button" id="btnClear">Clear All</button>
+    
+    <!-- <image src="" id="imgConverted" style="float:left; border: 2px solid #00f; margin-left: 10px;"></image>  Image in which content of the canvas is going ot be displayed inside -->
+</body>
+
+</html>
