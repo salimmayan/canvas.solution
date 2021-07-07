@@ -96,17 +96,19 @@ btnClear.addEventListener("click", function () {  //listen for the click event a
 btnDownload.addEventListener("click", function () {
     if (window.navigator.msSaveBlob) {  //IE and Edge (PNG only)//method msSaveBlob is exclusive to these browser makes so in essence u are checking if browswer is IE or edge
         window.navigator.msSaveBlob(msCanvas.msToBlob(), "canvas-image.png") //saving a bloc which would come from msCanvas.msToBlob()
+        const dataURI = myCanvas.toDataURL("image/jpeg");     //converting the canvas content into a data URI and basically a data URI is a base64 encoded string representing the actual content of the canvas 
+        console.log(dataURI);
     }
     else  //chrome & firefox
     {
-        const a = document.createElement("a");
-        document.body.appendChild(a);
-        // context.fillStyle = startBackGroundColor;  //default backgroudn color
-        // context.fillRect(0, 0, canvas.width, canvas.height);
-        a.href = myCanvas.toDataURL("image/jpeg", 1); //1 is highest quality image
-        a.download = "canvas-image.jpg";
-        a.click();
-        document.body.removeChild(a);
+        // const a = document.createElement("a");
+        // document.body.appendChild(a);
+        const dataURI = myCanvas.toDataURL("image/jpeg");     //converting the canvas content into a data URI and basically a data URI is a base64 encoded string representing the actual content of the canvas 
+        console.log(dataURI);
+        // a.href = myCanvas.toDataURL("image/jpeg", 1); //1 is highest quality image
+        // a.download = "canvas-image.jpg";
+        // a.click();
+        // document.body.removeChild(a);
     }
 });
 
